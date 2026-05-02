@@ -2,14 +2,11 @@ package main
 
 import "fmt"
 
-func main() {
-	name := "Emon"
-	name2 := "Sumu"
-	age := 21
-	age2 := 19
+// printInit is a regular function that can be called from main.
+func printInit() {
+	fmt.Println("This is the init function. It runs before the main function.")
+}
 
-	fmt.Println(name)
-	fmt.Println(name2)
-	fmt.Println(age)
-	fmt.Println(age2)
+func main() {
+	printInit()
 }
