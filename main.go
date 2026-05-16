@@ -2,11 +2,16 @@ package main
 
 import "fmt"
 
-// printInit is a regular function that can be called from main.
-func printInit() {
-	fmt.Println("This is the init function. It runs before the main function.")
-}
+
 
 func main() {
-	printInit()
+	a := 10
+	b := 20
+
+	a = 50
+	p := &a
+	sum := a + b
+
+	fmt.Printf("The sum of %d and %d is %d\n", a, b, sum)
+	fmt.Printf("The address of a is %p\n", p)
 }
