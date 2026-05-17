@@ -5,13 +5,14 @@ import "fmt"
 
 
 func main() {
-	a := 10
-	b := 20
+	 
+	 age := 30
 
-	a = 50
-	p := &a
-	sum := a + b
-
-	fmt.Printf("The sum of %d and %d is %d\n", a, b, sum)
-	fmt.Printf("The address of a is %p\n", p)
+	 if age < 18 {
+	 	fmt.Println("You are a minor.")
+	 } else if age >= 18 && age < 65 {
+	 	fmt.Println("You are an adult.")
+	 } else {
+	 	fmt.Println("You are a senior.")
+	 }
 }
