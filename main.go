@@ -2,17 +2,32 @@ package main
 
 import "fmt"
 
-
+type user struct {
+	name string
+	age  int
+	isLoggedIn bool
+	greet func()
+}
 
 func main() {
-	 
-	 age := 30
+	user1 := user{
+		name: "Emon",
+		age: 21,
+		isLoggedIn: true,
+		greet: func() {
+			fmt.Printf("Hello, %s! You are %d years old.\n", user1.name, user1.age)
+		},
+	} 
 
-	 if age < 18 {
-	 	fmt.Println("You are a minor.")
-	 } else if age >= 18 && age < 65 {
-	 	fmt.Println("You are an adult.")
-	 } else {
-	 	fmt.Println("You are a senior.")
-	 }
+	user2 := user{
+		name: "Sza",
+		age: 2,
+		isLoggedIn: false,
+		greet: func() {
+			fmt.Printf("Hello, %s! You are %d years old.\n", user2.name, user2.age)
+		},
+	}		
+
+	user1.greet()
+	user2.greet()
 }
